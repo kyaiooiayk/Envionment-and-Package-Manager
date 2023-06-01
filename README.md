@@ -35,7 +35,28 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 - Before installing or updating any libraries, Poetry will check the dependency requirements of all the existing libraries that are installed, and any dependency conflict that is discovered would cause the installation process to be stopped. Although this could mean a bit more initial effort to resolve conflicting versions of libraries, this also ensures that there are no dependency conflicts within the project that could lead to bugs later on.
 ***
 
-## How to create a `requirements.txt` file
+## How to create a `requirements.txt` file (the old way)
+- If some packages are not required in production then we would need two files and the do:
+  - Install only development dependencies: `pip install -r requirements-dev.txt`
+  - Installing only production dependencies `pip install -r requirements.txt`
+- Poetry, however, makes it much easier to organize dependencies for development and production. The example below shows how easy it is to do this in the `pyproject.toml` file:
+```shell
+[tool.poetry.dependencies]
+numpy = "^1.22.3"
+pandas = "^1.4.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+isort = "^5.9.3"
+pytest = "^6.0"
+```
+- Installing only production dependencies: `poetry install --no-dev`
+- Installing both development and production dependencies: `poetry install`
+- Install production dependency: `poetry add numpy`
+- Install development dependency: `poetry add pytest --dev`
+***
+
+## How to create a `requirements.txt` file (the old way)
 - See this [link](https://github.com/kyaiooiayk/Awesome-Python-Programming-Notes/blob/main/tutorials/requirements.md)
 ***
 
