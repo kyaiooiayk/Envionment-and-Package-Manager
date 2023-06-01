@@ -30,12 +30,12 @@ Envionment &amp; Package Manager | Conda vs. Poetry
   - Installation of `numpy` via pip: `pip install numpy==1.22.3` and check it via `pip list`
 ***
 
-## `Poetry` is better than `pip` at managing conflict
+## `Poetry` is better than `pip` at managing conflicts
 - If `pip` complains that a library to be installed has a conflict with the dependency requirements specified in another library, it still goes ahead.This could cause bugs to occur during runtime, which is definitely not what we want.
 - Before installing or updating any libraries, Poetry will check the dependency requirements of all the existing libraries that are installed, and any dependency conflict that is discovered would cause the installation process to be stopped. Although this could mean a bit more initial effort to resolve conflicting versions of libraries, this also ensures that there are no dependency conflicts within the project that could lead to bugs later on.
 ***
 
-## How to create a `requirements.txt` file (the old way)
+## How to create a `xx.toml` and `xx.lock` files
 - If some packages are not required in production then we would need two files and the do:
   - Install only development dependencies: `pip install -r requirements-dev.txt`
   - Installing only production dependencies `pip install -r requirements.txt`
@@ -50,10 +50,23 @@ black = "^21.7b0"
 isort = "^5.9.3"
 pytest = "^6.0"
 ```
-- Installing only production dependencies: `poetry install --no-dev`
-- Installing both development and production dependencies: `poetry install`
-- Install production dependency: `poetry add numpy`
-- Install development dependency: `poetry add pytest --dev`
+- Installing is done as follows:
+  - Installing only production dependencies: `poetry install --no-dev`
+  - Installing both development and production dependencies: `poetry install`
+  - Installing production dependency: `poetry add numpy`
+  - Installalling development dependency: `poetry add pytest --dev`
+- To perist the metedata ((i.e. package names and version numbers)), we generally use the command `pip freeze > requirements.txt`. With Poetry, we have the poetry.lock file, which basically stores only the metadata of dependencies that do not have conflicts with one another. The `poetry.lock` file is created automatically when we run `poetry install` for the first time. This file is also updated automatically whenever we run poetry add to install new dependencies, poetry update to update dependency versions, or `poetry lock` to check for conflicts in the dependencies listed in `pyproject.toml`. 
+***
+
+## Libray from private repositories
+- This is something that Poetry can do but Pip cannot. In Poetry, we could specify the following configuration in the pyproject.toml file to tell Poetry to search within both PyPI and the private repository.
+```
+[[tool.poetry.source]]
+name = "name-of-private-repo"
+url = "url-of-private-repo"
+secondary = true
+```
+- The secondary parameter basically tells Poetry to search for and install libraries from PyPI first, and only go to the private repository if some of the libraries cannot be found in PyPI. 
 ***
 
 ## How to create a `requirements.txt` file (the old way)
