@@ -55,7 +55,7 @@ pytest = "^6.0"
   - Installing both development and production dependencies: `poetry install`
   - Installing production dependency: `poetry add numpy`
   - Installalling development dependency: `poetry add pytest --dev`
-- To perist the metedata ((i.e. package names and version numbers)), we generally use the command `pip freeze > requirements.txt`. With Poetry, we have the poetry.lock file, which basically stores only the metadata of dependencies that do not have conflicts with one another. The `poetry.lock` file is created automatically when we run `poetry install` for the first time. This file is also updated automatically whenever we run poetry add to install new dependencies, poetry update to update dependency versions, or `poetry lock` to check for conflicts in the dependencies listed in `pyproject.toml`. 
+- To persist the metedata ((i.e. package names and version numbers)), we generally use the command `pip freeze > requirements.txt`. With Poetry, we have the poetry.lock file, which basically stores only the metadata of dependencies that do not have conflicts with one another. The `poetry.lock` file is created automatically when we run `poetry install` for the first time. This file is also updated automatically whenever we run poetry add to install new dependencies, poetry update to update dependency versions, or `poetry lock` to check for conflicts in the dependencies listed in `pyproject.toml`. 
 ***
 
 ## Libray from private repositories
