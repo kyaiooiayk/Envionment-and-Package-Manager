@@ -43,7 +43,17 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ***
 
 ## How to create a `xx.toml` and `xx.lock` files
-- Navigate to your project folder and create a new Poetry-managed with: `poetry new <project_name>`. This command creates a subdirectory named <project_name> and populates it with a project scaffold. This includes:
+- Navigate to your project folder and create a new Poetry-managed with: `poetry new <project_name>`. This command creates a subdirectory named <project_name> and populates it with a project scaffold.
+```
+project_name
+├── pyproject.toml
+├── README.md
+├── proejct_name
+│   └── __init__.py
+└── tests
+    └── __init__.py
+```
+- This includes:
   - `pyproject.toml` which is  managed for you, but you can still edit it.
   - `README.md`: An empty README for Python documentation. 
   - A subdirectory with the project name that contains the code for your project.
@@ -57,6 +67,7 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 - Let us assume you have a ready virtual environment you'd like to use. Say this is a conda env located at: `/opt/anaconda3/bin/python`
 - You can use it with: `poetry env use /opt/anaconda3/bin/python`. This will create a virtualenv located here: `<your project name>-VtigPj2m-py3.9 in /Users/gm_main/Library/Caches/pypoetry/virtualenvs`
 - Alternatively, when you created a proejct poetry creates one for you. In thiat case all you have to do is: `poetry env use ~/Library/Caches/pypoetry/virtualenvs/aa-VtigPj2m-py3.11`
+- If you want to get basic information about the currently activated virtual environment, use: `poetry env info`
 - Poetry-managed virtual environment lives in a central directory on the system, away from any projects associated with it. As a result, deleting a project directory does not also delete the corresponding virtual environment. Go to the root directory of the Poetry project and run: `poetry env remove python`.
 ***
 
