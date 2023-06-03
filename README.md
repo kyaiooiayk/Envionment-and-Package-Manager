@@ -45,9 +45,10 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ## How to create a `xx.toml` and `xx.lock` files
 - Navigate to your project folder and create a new Poetry-managed with: `poetry new <project_name>`. This command creates a subdirectory named <project_name> and populates it with a project scaffold. This includes:
   - `pyproject.toml` which is  managed for you, but you can still edit it.
-  - `README.rst`: An empty README file in ReStructuredText format, the file format used for Python documentation. (Nothing says that you must use .rst format for your docs; you can use Markdown for simpler cases.)
-  - `tests` folder for unit tests.
+  - `README.md`: An empty README for Python documentation. 
   - A subdirectory with the project name that contains the code for your project.
+- Navigate into you new `project_name` folder and create a `lock` file with: `poetry lock` if it is not there.
+- Check all is ok with: `poetry show` 
 ***
 
 ## Why `xx.toml` and `xx.lock` files are bette than `requirements.txt`
