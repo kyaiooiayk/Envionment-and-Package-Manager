@@ -54,7 +54,10 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ## Installing a python environment within Poetry
 - Keep in mind that poetry is python-project manager, so next step is to decide whihc python environment to use.
 - Poetry saves all the env here: `~/Library/Caches/pypoetry/virtualenvs/` if you are in a Mac.
-- Activate a particular version of python with: `poetry env use ~/Library/Caches/pypoetry/virtualenvs/aa-VtigPj2m-py3.11`
+- Let us assume you have a ready virtual environment you'd like to use. Say this is a conda env located at: `/opt/anaconda3/bin/python`
+- You can use it with: `poetry env use /opt/anaconda3/bin/python`. This will create a virtualenv located here: `<your project name>-VtigPj2m-py3.9 in /Users/gm_main/Library/Caches/pypoetry/virtualenvs`
+- Alternatively, when you created a proejct poetry creates one for you. In thiat case all you have to do is: `poetry env use ~/Library/Caches/pypoetry/virtualenvs/aa-VtigPj2m-py3.11`
+- Poetry-managed virtual environment lives in a central directory on the system, away from any projects associated with it. As a result, deleting a project directory does not also delete the corresponding virtual environment. Go to the root directory of the Poetry project and run: `poetry env remove python`.
 ***
 
 ## Why `xx.toml` and `xx.lock` files are bette than `requirements.txt`
@@ -99,4 +102,5 @@ secondary = true
 - [Does it make sense to use Conda + Poetry?](https://stackoverflow.com/questions/70851048/does-it-make-sense-to-use-conda-poetry)
 - [Why you should use Poetry instead of Pip or Conda for Python Projects](https://blogs.sap.com/2022/05/08/why-you-should-use-poetry-instead-of-pip-or-conda-for-python-projects/)
 - [Poetry installed but `poetry: command not found`](https://stackoverflow.com/questions/70003829/poetry-installed-but-poetry-command-not-found)
+- [How to manage Python projects with Poetry](https://www.infoworld.com/article/3527850/how-to-manage-python-projects-with-poetry.html)
 ***
