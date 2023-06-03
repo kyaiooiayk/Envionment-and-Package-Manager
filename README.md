@@ -91,4 +91,5 @@ secondary = true
 ## References
 - [Does it make sense to use Conda + Poetry?](https://stackoverflow.com/questions/70851048/does-it-make-sense-to-use-conda-poetry)
 - [Why you should use Poetry instead of Pip or Conda for Python Projects](https://blogs.sap.com/2022/05/08/why-you-should-use-poetry-instead-of-pip-or-conda-for-python-projects/)
+- [Poetry installed but `poetry: command not found`](https://stackoverflow.com/questions/70003829/poetry-installed-but-poetry-command-not-found)
 ***
