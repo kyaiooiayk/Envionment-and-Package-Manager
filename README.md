@@ -1,4 +1,4 @@
-# Envionment-and-Package-Manager
+# Environment, Package and Project Manager
 Envionment &amp; Package Manager | Conda vs. Poetry
 ***
 
