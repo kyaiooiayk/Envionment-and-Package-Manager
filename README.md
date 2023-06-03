@@ -35,6 +35,11 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 - Before installing or updating any libraries, Poetry will check the dependency requirements of all the existing libraries that are installed, and any dependency conflict that is discovered would cause the installation process to be stopped. Although this could mean a bit more initial effort to resolve conflicting versions of libraries, this also ensures that there are no dependency conflicts within the project that could lead to bugs later on.
 ***
 
+## Installing `poetry`
+- Run: `pip install poetry`
+- Verify install with: `which poetry`
+***
+
 ## How to create a `xx.toml` and `xx.lock` files
 - If some packages are not required in production then we would need two files and the do:
   - Install only development dependencies: `pip install -r requirements-dev.txt`
