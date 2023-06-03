@@ -51,6 +51,12 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 - Check all is ok with: `poetry show` 
 ***
 
+## Installing a python environment within Poetry
+- Keep in mind that poetry is python-project manager, so next step is to decide whihc python environment to use.
+- Poetry saves all the env here: `~/Library/Caches/pypoetry/virtualenvs/` if you are in a Mac.
+- Activate a particular version of python with: `poetry env use ~/Library/Caches/pypoetry/virtualenvs/aa-VtigPj2m-py3.11`
+***
+
 ## Why `xx.toml` and `xx.lock` files are bette than `requirements.txt`
 - If some packages are not required in production then we would need two files and the do:
   - Install only development dependencies: `pip install -r requirements-dev.txt`
@@ -74,7 +80,7 @@ pytest = "^6.0"
 - To persist the metedata ((i.e. package names and version numbers)), we generally use the command `pip freeze > requirements.txt`. With Poetry, we have the poetry.lock file, which basically stores only the metadata of dependencies that do not have conflicts with one another. The `poetry.lock` file is created automatically when we run `poetry install` for the first time. This file is also updated automatically whenever we run poetry add to install new dependencies, poetry update to update dependency versions, or `poetry lock` to check for conflicts in the dependencies listed in `pyproject.toml`. 
 ***
 
-## Libray from private repositories
+## Library from private repositories
 - This is something that Poetry can do but Pip cannot. In Poetry, we could specify the following configuration in the pyproject.toml file to tell Poetry to search within both PyPI and the private repository.
 ```
 [[tool.poetry.source]]
