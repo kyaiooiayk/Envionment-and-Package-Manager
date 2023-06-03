@@ -36,11 +36,21 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ***
 
 ## Installing `poetry`
-- Run: `pip install poetry`
-- Verify install with: `which poetry`
+- Although you can run: `pip install poetry` and then verify install with: `which poetry`, this will install poetry in a specific Python installation. This isn’t recommended as this might conflict with other system files, and it makes using Poetry consistently with different versions of Python and different virtual environments difficult.
+- If you are on mac install `pipx` with: `brew install pipx`, and the `pipx ensurepath`
+- Install it with: `pipx install poetry`. 
+- For Mac users, create (if it does not exist) a .zshrc file in your home folder with the following: `export PATH="$HOME/.local/bin:$PATH"`
 ***
 
 ## How to create a `xx.toml` and `xx.lock` files
+- Navigate to your project folder and create a new Poetry-managed with: `poetry new <project_name>`. This command creates a subdirectory named <project_name> and populates it with a project scaffold. This includes:
+  - `pyproject.toml` which is  managed for you, but you can still edit it.
+  - `README.rst`: An empty README file in ReStructuredText format, the file format used for Python documentation. (Nothing says that you must use .rst format for your docs; you can use Markdown for simpler cases.)
+  - `tests` folder for unit tests.
+  - A subdirectory with the project name that contains the code for your project.
+***
+
+## Why `xx.toml` and `xx.lock` files are bette than `requirements.txt`
 - If some packages are not required in production then we would need two files and the do:
   - Install only development dependencies: `pip install -r requirements-dev.txt`
   - Installing only production dependencies `pip install -r requirements.txt`
