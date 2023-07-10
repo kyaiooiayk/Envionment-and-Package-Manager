@@ -48,7 +48,7 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 project_name
 ├── pyproject.toml
 ├── README.md
-├── proejct_name
+├── package_name
 │   └── __init__.py
 └── tests
     └── __init__.py
