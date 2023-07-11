@@ -12,14 +12,9 @@ Envionment &amp; Package Manager | Conda vs. Poetry
   - Poetry is a newer dependency management tool that is gaining visibility and popularity for Python users. The use of `pyproject.toml` and `poetry.lock` files make it similar to the way the Node Package Manager (npm) for Node.js works. More information about Poetry can be found in its documentation.
 ***
 
-## How to create a virtual environment with conda
-- If you have just created your new virtual environment: `pip install jupyter`
-- See which conda you are using (it shows the path of the executable being called): `which conda`
-- Create a virtual environment using conda specific command: `conda create –-name my_env_name python=3.7` (check for the last stable Python realease [here](https://www.python.org/downloads/macos/))
-- Activate the virtual environment: `conda activate my_env_name` 
-- How to visualise all the env available: `conda env list`
-- Install any package you like via these two options: `conda install package_name` or `pip package_name`
-- How to delete a virtual env: `conda env remove --name=my_env_name`
+## 4 ways to create a virtual environment
+- [Native | Puenv | Conda | Poetry](https://github.com/kyaiooiayk/Environment-Package-and-Project-Manager/edit/dev/virtual_environment.md)
+***
 ***
 
 ## Conda vs. poetry
