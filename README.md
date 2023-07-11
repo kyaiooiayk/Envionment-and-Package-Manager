@@ -13,7 +13,7 @@ Environment | Package Manager | Conda vs. Poetry
 ***
 
 ## 4 ways to create a virtual environment
-- [Native | Puenv | Conda | Poetry](https://github.com/kyaiooiayk/Environment-Package-and-Project-Manager/edit/dev/virtual_environment.md)
+- [Native | Pyenv | Conda | Poetry](https://github.com/kyaiooiayk/Environment-Package-and-Project-Manager/edit/dev/virtual_environment.md)
 ***
 ***
 
