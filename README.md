@@ -1,5 +1,5 @@
 # Environment, Package and Project Manager
-Envionment &amp; Package Manager | Conda vs. Poetry
+Environment | Package Manager | Conda vs. Poetry
 ***
 
 ## Dependencies
@@ -12,14 +12,9 @@ Envionment &amp; Package Manager | Conda vs. Poetry
   - Poetry is a newer dependency management tool that is gaining visibility and popularity for Python users. The use of `pyproject.toml` and `poetry.lock` files make it similar to the way the Node Package Manager (npm) for Node.js works. More information about Poetry can be found in its documentation.
 ***
 
-## How to create a virtual environment with conda
-- If you have just created your new virtual environment: `pip install jupyter`
-- See which conda you are using (meaning it shows the path of the executable being called): `which conda`
-- Create a virtual environment using conda specific command: `conda create –-name my_env_name python=3.7` (check for the last stable Python realease [here](https://www.python.org/downloads/macos/))
-- Activate the virtual environment: `conda activate my_env_name` 
-- How to visualise all the env available: `conda env list`
-- Install any package you like via these two options: `conda install package_name` or `pip package_name`
-- How to delete a virtual env: `conda env remove --name=my_env_name`
+## 4 ways to create a virtual environment
+- [Native | Puenv | Conda | Poetry](https://github.com/kyaiooiayk/Environment-Package-and-Project-Manager/edit/dev/virtual_environment.md)
+***
 ***
 
 ## Conda vs. poetry
@@ -41,7 +36,7 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ***
 
 ## `Poetry` is better than `pip` at managing conflicts
-- If `pip` complains that a library to be installed has a conflict with the dependency requirements specified in another library, it still goes ahead.This could cause bugs to occur during runtime, which is definitely not what we want.
+- If `pip` complains that a library to be installed has a conflict with the dependency requirements specified in another library, it still goes ahead. This could cause bugs to occur during runtime, which is definitely not what we want.
 - Before installing or updating any libraries, Poetry will check the dependency requirements of all the existing libraries that are installed, and any dependency conflict that is discovered would cause the installation process to be stopped. Although this could mean a bit more initial effort to resolve conflicting versions of libraries, this also ensures that there are no dependency conflicts within the project that could lead to bugs later on.
 ***
 
@@ -72,7 +67,7 @@ project_name
 ***
 
 ## Installing a python environment within Poetry
-- Keep in mind that poetry is python-project manager, so next step is to decide whihc python environment to use.
+- Keep in mind that poetry is python-project manager, so next step is to decide which python environment to use.
 - Poetry saves all the env here: `~/Library/Caches/pypoetry/virtualenvs/` if you are in a Mac.
 - Let us assume you have a ready virtual environment you'd like to use. Say this is a conda env located at: `/opt/anaconda3/bin/python`
 - You can use it with: `poetry env use /opt/anaconda3/bin/python`. This will create a virtualenv located here: `<your project name>-VtigPj2m-py3.9 in /Users/gm_main/Library/Caches/pypoetry/virtualenvs`
