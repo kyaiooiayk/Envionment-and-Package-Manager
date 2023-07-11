@@ -72,7 +72,7 @@ project_name
 ***
 
 ## Installing a python environment within Poetry
-- Keep in mind that poetry is python-project manager, so next step is to decide whihc python environment to use.
+- Keep in mind that poetry is python-project manager, so next step is to decide which python environment to use.
 - Poetry saves all the env here: `~/Library/Caches/pypoetry/virtualenvs/` if you are in a Mac.
 - Let us assume you have a ready virtual environment you'd like to use. Say this is a conda env located at: `/opt/anaconda3/bin/python`
 - You can use it with: `poetry env use /opt/anaconda3/bin/python`. This will create a virtualenv located here: `<your project name>-VtigPj2m-py3.9 in /Users/gm_main/Library/Caches/pypoetry/virtualenvs`
