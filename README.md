@@ -41,7 +41,7 @@ Envionment &amp; Package Manager | Conda vs. Poetry
 ***
 
 ## `Poetry` is better than `pip` at managing conflicts
-- If `pip` complains that a library to be installed has a conflict with the dependency requirements specified in another library, it still goes ahead.This could cause bugs to occur during runtime, which is definitely not what we want.
+- If `pip` complains that a library to be installed has a conflict with the dependency requirements specified in another library, it still goes ahead. This could cause bugs to occur during runtime, which is definitely not what we want.
 - Before installing or updating any libraries, Poetry will check the dependency requirements of all the existing libraries that are installed, and any dependency conflict that is discovered would cause the installation process to be stopped. Although this could mean a bit more initial effort to resolve conflicting versions of libraries, this also ensures that there are no dependency conflicts within the project that could lead to bugs later on.
 ***
 
