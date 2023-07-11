@@ -1,5 +1,5 @@
 # Environment, Package and Project Manager
-Envionment &amp; Package Manager | Conda vs. Poetry
+Environment | Package Manager | Conda vs. Poetry
 ***
 
 ## Dependencies
