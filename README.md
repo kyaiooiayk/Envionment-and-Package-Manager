@@ -9,12 +9,11 @@ Environment | Package Manager | Conda vs. Poetry
 ## Intro on  `Conda`, `pip` and `Poetry`
   - Conda is a dependency management tool that comes with Anaconda. Anaconda is typically used by beginners in data science who are starting out in Python programming, and do not want to worry too much about about installing the common dependencies needed for data science work, such as numpy, pandas, jupyter and scikit-learn.
   - Pip: Pip is a dependency management tool that comes together with the standard Python installation for Windows, and can be installed via Homebrew for MacOS and the distribution app manager for Linux systems (e.g. apt for Debian and Ubuntu).
-  - Poetry is a newer dependency management tool that is gaining visibility and popularity for Python users. The use of `pyproject.toml` and `poetry.lock` files make it similar to the way the Node Package Manager (npm) for Node.js works. More information about Poetry can be found in its documentation.
+  - Poetry is a newer dependency management tool that is gaining visibility and popularity for Python users. The use of `pyproject.toml` and `poetry.lock` files make it similar to the way the Node Package Manager (npm) for Node.js works.
 ***
 
 ## 4 ways to create a virtual environment
 - [Native | Pyenv | Conda | Poetry](https://github.com/kyaiooiayk/Environment-Package-and-Project-Manager/edit/dev/virtual_environment.md)
-***
 ***
 
 ## Conda vs. poetry
